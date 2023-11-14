@@ -156,7 +156,10 @@ class AdrPlugin(BasePlugin[AdrPluginConfig]):
 
 
 def _get_id_from_page(page: Page) -> str:
-    return page.url.replace("/", "")
+    print(f"Page ID URL: {page.url}")
+    id = page.url.replace("/", "")
+    print(f"Page ID: {id}")
+    return id
 
 
 log = logging.getLogger("mkdocs")
