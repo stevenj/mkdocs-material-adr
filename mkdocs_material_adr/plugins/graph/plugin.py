@@ -157,7 +157,7 @@ class AdrPlugin(BasePlugin[AdrPluginConfig]):
 
 def _get_id_from_page(page: Page) -> str:
     print(f"Page ID URL: {page.url}")
-    id = page.url.replace("/", "")
+    id = page.url.split("/")[-1]
     print(f"Page ID: {id}")
     return id
 
